@@ -817,15 +817,15 @@ width: 250px;
 
 #lightArcher{
 position: absolute;
-width: 492px;
-height: 403px;
+width: 246px;
+height: 202px;
 -webkit-animation: lightArcherIdle 1.5s steps(9) infinite;
         animation: lightArcherIdle 1.5s steps(9) infinite;
 -webkit-transform: scale(.7);
     -ms-transform: scale(.7);
         transform: scale(.7);
 margin: auto;
-background-image: url("../img/lightArcher.png");
+background-image: url("../img/lightSpriteSheet.png");
 left: 50px;
 bottom: 180px;
 }
@@ -837,15 +837,15 @@ bottom: 180px;
 
 #lightCommander{
 position: absolute;
-width: 757px;
-height: 554px;
+width: 310px;
+height: 227px;
 -webkit-animation: lightCommanderIdle 1.5s steps(8) infinite;
         animation: lightCommanderIdle 1.5s steps(8) infinite;
 -webkit-transform: scale(1);
     -ms-transform: scale(1);
         transform: scale(1);
 margin: auto;
-background-image: url("../img/lightCommander.png");
+background-image: url("../img/lightSpriteSheet.png");
 left: -150px;
 bottom: 300px;
 
@@ -859,15 +859,15 @@ bottom: 300px;
 #lightDog{
 position: absolute;
 left: 400px;
-width: 602px;
-height: 258px;
+width: 301px;
+height: 129px;
 -webkit-animation: lightDogIdle 1s steps(8) infinite;
         animation: lightDogIdle 1s steps(8) infinite;
 -webkit-transform: scale(.7);
     -ms-transform: scale(.7);
         transform: scale(.7);
 margin: auto;
-background-image: url("../img/lightDog.png");
+background-image: url("../img/lightSpriteSheet.png");
 bottom: 150px;
 
 }
@@ -878,15 +878,15 @@ bottom: 150px;
 
 #lightSoldier{
 position: absolute;
-width: 463px;
-height: 413px;
+width: 232px;
+height: 207px;
 -webkit-animation: lightSoldierIdle 1.5s steps(9) infinite;
         animation: lightSoldierIdle 1.5s steps(9) infinite;
 -webkit-transform: scale(.75);
     -ms-transform: scale(.75);
         transform: scale(.75);
 margin: auto;
-background-image: url("../img/lightSoldier.png");
+background-image: url("../img/lightSpriteSheet.png");
 bottom: 150px;
 left: 300px;
 
@@ -898,15 +898,15 @@ left: 300px;
 
 #darkCommander{
 position: absolute;
-width: 644px;
-height: 676px;
+width: 322px;
+height: 338px;
 -webkit-animation: darkCommanderIdle 1s steps(11) infinite;
         animation: darkCommanderIdle 1s steps(11) infinite;
 -webkit-transform: scale(.8);
     -ms-transform: scale(.8);
         transform: scale(.8);
 margin: auto;
-background-image: url("../img/darkCommander.png");
+background-image: url("../img/darkSpriteSheet.png");
 right: -200px;
 bottom: 150px;  
 }
@@ -918,15 +918,15 @@ bottom: 150px;
 
 #darkWizard{
 position: absolute;
-width: 453px;
-height: 566px;
+width: 227px;
+height: 283px;
 -webkit-animation: darkWizardIdle 1.3s steps(12) infinite;
         animation: darkWizardIdle 1.3s steps(12) infinite;
 -webkit-transform: scale(.7);
     -ms-transform: scale(.7);
         transform: scale(.7);
 margin: auto;
-background-image: url("../img/darkWizard.png");
+background-image: url("../img/darkSpriteSheet.png");
 right: 160px;
 bottom: 110px;
 
@@ -943,10 +943,10 @@ margin: auto;
 -webkit-transform: scale(.5);
     -ms-transform: scale(.5);
         transform: scale(.5);
-background-image: url("../img/maskdog.png");
+background-image: url("../img/darkSpriteSheet.png");
 bottom: 150px;
-width: 325px;
-height: 253px;
+width: 162px;
+height: 127px;
 -webkit-animation: darkDogIdle 1s steps(10) infinite;
         animation: darkDogIdle 1s steps(10) infinite;
 }
@@ -957,15 +957,15 @@ height: 253px;
 
 #darkGrunt{
 position: absolute;
-width: 523px;
-height: 483px;
+width: 262px;
+height: 242px;
 -webkit-animation: darkGruntIdle 1.3s steps(9) infinite;
         animation: darkGruntIdle 1.3s steps(9) infinite;
 -webkit-transform: scale(.6);
     -ms-transform: scale(.6);
         transform: scale(.6);
 margin: auto;
-background-image: url("../img/darkGrunt.png");
+background-image: url("../img/darkSpriteSheet.png");
 bottom: 100px;
 right: 350px;
 }
@@ -1232,804 +1232,490 @@ right: 350px;
 
 
 /*animations*/
-/*DARKDOG*/
-        @keyframes darkDogAttack {
-		   0% {animation: darkDogAttack steps(5);
-               background-position: -1625px -506px; }
-		   28% { background-position: -3250px -506px; }
-		   
-		   28.1% {animation: darkDogAttack steps(10);
-               background-position: 0px -759px; }
-		   87.62% { background-position: -3250px -759px; }
-		   
-		   87.621% {animation: darkDogAttack steps(2) ;
-               background-position: 0px -1012px; }
-		   100% { background-position: -650px -1012px; }
-		   
-		}
-        
-        @keyframes darkDogDamaged {
-		   0% {animation: darkDogDamaged steps(8);
-               background-position: -650px -1012px; }
-		   90% { background-position: -3250px -1012px; }
-		   
-		   90.001% {
-               animation: darkDogDamaged steps(1);
-               background-position: 0px -1265px; }
-		   100% { background-position: -325px -1265px; }
-		   
-		}
 
-        @keyframes darkDogIdle {
-		   0% { background-position: 0px 0px; }
-		   37.4% { background-position: -3250px 0px; }
-		   
-		   37.41% { background-position: 0px -253px; }
-		   79% { background-position: -3250px -253px; }
-		   
-		   79.001% {animation: darkDog steps(4) ;
-               background-position: 0px -506px; }
-		   100% { background-position: -1300px -506px; }
-		   
-		}
-        @keyframes darkDogDeath {
-		   0% {animation: darkDog 1.5s steps(9) ;
-               background-position: 0px -1518px; }
-		   37.4% { background-position: -2925px -1518px; }
-		   
-		   37.41% {animation: darkDog 1.5s steps(10) ;
-               background-position: 0px -1771px; }
-		   74.8% { background-position: -3250px -1771px; }
-		   
-		   74.81% {animation: darkDog 1.5s steps(5) ;
-               background-position: 0px -2024px; }
-		   100% { background-position: -1625px -2024px; }
-		   
-		}
-        
+/*DARKDOG*/
+@keyframes darkDogAttack {
+    0% {animation: darkDogAttack steps(5);
+        background-position: -813px -6578px; }
+    28% { background-position: -1625px -6578px; }
+    
+    28.001% {animation: darkDogAttack steps(10);
+        background-position: 0px -6704px; }
+    87% { background-position: -1625px -6704px; }
+    
+    87.001% {animation: darkDogAttack steps(2) ;
+        background-position: 0px -6830px; }
+    100% { background-position: -325px -6830px; }
+    
+ }
+ 
+ 
+ 
+ 
+ 
+ @keyframes darkDogDamaged {
+    0% {animation: darkDogDamaged steps(8);
+        background-position: -325px -6832px; }
+    90% { background-position: -1625px -6832px; }
+    
+    90.001% {
+        animation: darkDogDamaged steps(1);
+        background-position: 0px -6959px; }
+    100% { background-position: -163px -6959px; }
+    
+ }
+ 
+ 
+ 
+ @keyframes darkDogIdle {
+    0% {animation: darkDog steps(10);
+        background-position: 0px 6324px; }
+    37% { background-position: -1625px 6324px; }
+    
+    37.001% { animation: darkDog steps(10);
+        background-position: 0px -6451px; }
+    79% { background-position: -1625px -6451px; }
+    
+    79.001% {animation: darkDog steps(3) ;
+        background-position: 0px -6578px; }
+    100% { background-position: -486px -6578px; }
+    
+ }
+ 
+ @keyframes darkDogDeath {
+    0% {animation: darkDog 1.5s steps(9) ;
+        background-position: 0px -7086px; }
+    37% { background-position: -1463px -7086px; }
+    
+    37.001% {animation: darkDog 1.5s steps(10) ;
+        background-position: 0px -7213px; }
+    74% { background-position: -1625px -7213px; }
+    
+    74.001% {animation: darkDog 1.5s steps(5) ;
+        background-position: 0px -7340px; }
+    100% { background-position: -813px -7340px; }
+    
+ }
+ 
 
 /*DARKWIZZ*/
- @-webkit-keyframes darkWizardIdle {
-           0% {-webkit-animation: darkWizardIdle steps(12);animation: darkWizardIdle steps(12);
-               background-position: 0px -0px; }
-           25% { background-position: -5436px -0px; }
-           
-           25.1% {-webkit-animation: darkWizardIdle steps(12);animation: darkWizardIdle steps(12);
-               background-position: 0px -566px; }
-           75% { background-position: -5436px -566px; }
-            
-            75.1% {-webkit-animation: darkWizardIdle steps(12);animation: darkWizardIdle steps(12);
-               background-position: 0px -1132px; }
-           100% { background-position: -5436px -1132px; }
-           
-        }
- @keyframes darkWizardIdle {
-           0% {-webkit-animation: darkWizardIdle steps(12);animation: darkWizardIdle steps(12);
-               background-position: 0px -0px; }
-           25% { background-position: -5436px -0px; }
-           
-           25.1% {-webkit-animation: darkWizardIdle steps(12);animation: darkWizardIdle steps(12);
-               background-position: 0px -566px; }
-           75% { background-position: -5436px -566px; }
-            
-            75.1% {-webkit-animation: darkWizardIdle steps(12);animation: darkWizardIdle steps(12);
-               background-position: 0px -1132px; }
-           100% { background-position: -5436px -1132px; }
-           
-        }
-        
-        @-webkit-keyframes darkWizardAttack {
-           0% {-webkit-animation: darkWizardAttack steps(12);animation: darkWizardAttack steps(12);
-               background-position: 0px -1698px; }
-           55% { background-position: -5436px -1698px; }
-           
-           55.1% {-webkit-animation: darkWizardAttack steps(12);animation: darkWizardAttack steps(12);
-               background-position: 0px -2264px; }
-           100% { background-position: -5436px -2264px; }
-           
-        }
-        
-        @keyframes darkWizardAttack {
-           0% {-webkit-animation: darkWizardAttack steps(12);animation: darkWizardAttack steps(12);
-               background-position: 0px -1698px; }
-           55% { background-position: -5436px -1698px; }
-           
-           55.1% {-webkit-animation: darkWizardAttack steps(12);animation: darkWizardAttack steps(12);
-               background-position: 0px -2264px; }
-           100% { background-position: -5436px -2264px; }
-           
-        }
-        
-        @-webkit-keyframes darkWizardDamaged {
-           0% {-webkit-animation: darkWizardDamaged steps(12);animation: darkWizardDamaged steps(12);
-               background-position: 0px -2830px; }
-           100% { background-position: -5436px -2830px; }
-           
-        }
-        
-        @keyframes darkWizardDamaged {
-           0% {-webkit-animation: darkWizardDamaged steps(12);animation: darkWizardDamaged steps(12);
-               background-position: 0px -2830px; }
-           100% { background-position: -5436px -2830px; }
-           
-        }
-        
-        @-webkit-keyframes darkWizardDeath {
-           0% {-webkit-animation: darkWizardDeath steps(12);animation: darkWizardDeath steps(12);
-               background-position: 0px -3396px; }
-           55% { background-position: -5436px -3396px; }
-           
-           55.1% {-webkit-animation: darkWizardDeath steps(12);animation: darkWizardDeath steps(12);
-               background-position: 0px -3962px; }
-           100% { background-position: -5436px -3962px; }
-           
-        }
-        
-        @keyframes darkWizardDeath {
-           0% {-webkit-animation: darkWizardDeath steps(12);animation: darkWizardDeath steps(12);
-               background-position: 0px -3396px; }
-           55% { background-position: -5436px -3396px; }
-           
-           55.1% {-webkit-animation: darkWizardDeath steps(12);animation: darkWizardDeath steps(12);
-               background-position: 0px -3962px; }
-           100% { background-position: -5436px -3962px; }
-           
-        }
+@keyframes darkWizardIdle {
+    0% {animation: darkWizardIdle steps(12);
+        background-position: 0px -2366px; }
+    25% { background-position: -2718px -2366px; }
+    
+    25.1% {animation: darkWizardIdle steps(12);
+        background-position: 0px -2649px; }
+    75% { background-position: -2718px -2649px; }
+     
+     75.1% {animation: darkWizardIdle steps(12);
+        background-position: 0px -2932px; }
+    100% { background-position: -2718px -2932px; }
+    
+ }
+ 
+ @keyframes darkWizardAttack {
+    0% {animation: darkWizardAttack steps(12);
+        background-position: 0px -3215px; }
+    55% { background-position: -2718px -3215px; }
+    
+    55.1% {animation: darkWizardrAttack steps(12);
+        background-position: 0px -3498px; }
+    100% { background-position: -2718px -3498px; }
+    
+ }
+ 
+ @keyframes darkWizardDamaged {
+    0% {animation: darkWizardDamaged steps(12);
+        background-position: 0px -3781px; }
+    100% { background-position: -2718px -3781px; }
+    
+ }
+ 
+ @keyframes darkWizardDeath {
+    0% {animation: darkWizardDeath steps(12);
+        background-position: 0px -4064px; }
+    55% { background-position: -2718px -4064px; }
+    
+    55.1% {animation: darkWizardrDeath steps(12);
+        background-position: 0px -4347px; }
+    100% { background-position: -2718px -4347px; }
+    
+ }
 
 /*DARKGRUNT*/
-@-webkit-keyframes darkGruntIdle {
-           0% {-webkit-animation: darkGruntIdle steps(9);animation: darkGruntIdle steps(9);
-               background-position: 0px -0px; }
-           50% { background-position: -4707px -0px; }
-           
-           50.1% {-webkit-animation: darkGruntIdle steps(9);animation: darkGruntIdle steps(9);
-               background-position: 0px -483px; }
-           96% { background-position: -4707px -483px; }
-            
-            96.1% {-webkit-animation: darkGruntIdle steps(1);animation: darkGruntIdle steps(1);
-               background-position: 0px -966px; }
-           100% { background-position: -523px -966px; }
-           
-        }
 @keyframes darkGruntIdle {
-           0% {-webkit-animation: darkGruntIdle steps(9);animation: darkGruntIdle steps(9);
-               background-position: 0px -0px; }
-           50% { background-position: -4707px -0px; }
-           
-           50.1% {-webkit-animation: darkGruntIdle steps(9);animation: darkGruntIdle steps(9);
-               background-position: 0px -483px; }
-           96% { background-position: -4707px -483px; }
-            
-            96.1% {-webkit-animation: darkGruntIdle steps(1);animation: darkGruntIdle steps(1);
-               background-position: 0px -966px; }
-           100% { background-position: -523px -966px; }
-           
-        }
-        
-        @-webkit-keyframes darkGruntAttack {
-           0% {-webkit-animation: darkGruntAttack steps(8);animation: darkGruntAttack steps(8);
-               background-position: -523px -966px; }
-           50% { background-position: -4707px -966px; }
-           
-           50.1% {-webkit-animation: darkGruntAttack steps(9);animation: darkGruntAttack steps(9);
-               background-position: 0px -1449px; }
-           100% { background-position: -4707px -1449px; }
-        }
-        
-        @keyframes darkGruntAttack {
-           0% {-webkit-animation: darkGruntAttack steps(8);animation: darkGruntAttack steps(8);
-               background-position: -523px -966px; }
-           50% { background-position: -4707px -966px; }
-           
-           50.1% {-webkit-animation: darkGruntAttack steps(9);animation: darkGruntAttack steps(9);
-               background-position: 0px -1449px; }
-           100% { background-position: -4707px -1449px; }
-        }
-        
-        @-webkit-keyframes darkGruntDamaged {
-           0% {-webkit-animation: darkGruntDamaged steps(3);animation: darkGruntDamaged steps(3);
-               background-position: -3138px -2415px; }
-           50% { background-position: -4707px -2415px; }
-           
-           50.1% {-webkit-animation: darkGruntDamaged steps(9);animation: darkGruntDamaged steps(9);
-               background-position: 0px -2898px; }
-           100% { background-position: -4707px -2898px; }
-        }
-        
-        @keyframes darkGruntDamaged {
-           0% {-webkit-animation: darkGruntDamaged steps(3);animation: darkGruntDamaged steps(3);
-               background-position: -3138px -2415px; }
-           50% { background-position: -4707px -2415px; }
-           
-           50.1% {-webkit-animation: darkGruntDamaged steps(9);animation: darkGruntDamaged steps(9);
-               background-position: 0px -2898px; }
-           100% { background-position: -4707px -2898px; }
-        }
-        
-        
-        @-webkit-keyframes darkGruntDeath {
-           0% {-webkit-animation: darkGruntDeath steps(9);animation: darkGruntDeath steps(9);
-               background-position: -0px -1932px; }
-           50% { background-position: -4707px -1932px; }
-           
-           50.1% {-webkit-animation: darkGruntDeath steps(5);animation: darkGruntDeath steps(5);
-               background-position: 0px -2415px; }
-           100% { background-position: -2615px -2415px; }
-        }
-        
-        
-        @keyframes darkGruntDeath {
-           0% {-webkit-animation: darkGruntDeath steps(9);animation: darkGruntDeath steps(9);
-               background-position: -0px -1932px; }
-           50% { background-position: -4707px -1932px; }
-           
-           50.1% {-webkit-animation: darkGruntDeath steps(5);animation: darkGruntDeath steps(5);
-               background-position: 0px -2415px; }
-           100% { background-position: -2615px -2415px; }
-        }
+    0% {animation: darkGruntIdle steps(9);
+        background-position: 0px -4630px; }
+    50% { background-position: -2354px -4630px; }
+    
+    50.1% {animation: darkGruntIdle steps(9);
+        background-position: 0px -4872px; }
+    96% { background-position: -2354px -4872px; }
+     
+     96.1% {animation: darkGruntIdle steps(1);
+        background-position: 0px -5114px; }
+    100% { background-position: -262px -5114px; }
+    
+ }
+ 
+ @keyframes darkGruntAttack {
+    0% {animation: darkGruntAttack steps(8);
+        background-position: -262px -5114px; }
+    50% { background-position: -2354px -5114px; }
+    
+    50.1% {animation: darkGruntAttack steps(9);
+        background-position: 0px -5356px; }
+    100% { background-position: -2354px -5356px; }
+ }
+ 
+ @keyframes darkGruntDamaged {
+    0% {animation: darkGruntDamaged steps(3);
+        background-position: -1569px -5840px; }
+    50% { background-position: -2354px -5840px; }
+    
+    50.1% {animation: darkGruntDamaged steps(9);
+        background-position: 0px -6082px; }
+    100% { background-position: -2354px -6082px; }
+ }
+ 
+ 
+ @keyframes darkGruntDeath {
+    0% {animation: darkGruntDeath steps(9);
+        background-position: -0px -5598px; }
+    50% { background-position: -2354px -5598px; }
+    
+    50.1% {animation: darkGruntDeath steps(5);
+        background-position: 0px -5840px; }
+    100% { background-position: -1308px -5840px; }
+ }
+ 
 
 /*DARKCOMMANDER*/
- @-webkit-keyframes darkCommanderIdle {
-           0% {-webkit-animation: darkCommanderIdle steps(11);animation: darkCommanderIdle steps(11);
-               background-position: 0px -0px; }
-           55% { background-position: -7084px -0px; }
-           
-           55.1% {-webkit-animation: darkCommanderIdle steps(8);animation: darkCommanderIdle steps(8);
-               background-position: 0px -676px; }
-           100% { background-position: -5152px -676px; }
-           
-        }
- @keyframes darkCommanderIdle {
-           0% {-webkit-animation: darkCommanderIdle steps(11);animation: darkCommanderIdle steps(11);
-               background-position: 0px -0px; }
-           55% { background-position: -7084px -0px; }
-           
-           55.1% {-webkit-animation: darkCommanderIdle steps(8);animation: darkCommanderIdle steps(8);
-               background-position: 0px -676px; }
-           100% { background-position: -5152px -676px; }
-           
-        }
-        
-        
-        
-        @-webkit-keyframes darkCommanderAttack {
-           0% {-webkit-animation: darkCommanderAttack steps(4);animation: darkCommanderAttack steps(4);
-               background-position: -4508px -676px; }
-           25% { background-position: -7084px -676px; }
-           
-           25.1% {-webkit-animation: darkCommanderAttack steps(11);animation: darkCommanderAttack steps(11);
-               background-position: 0px -1352px; }
-           75% { background-position: -7084px -1352px; }
-            
-            75.1% {-webkit-animation: darkCommanderAttack steps(5);animation: darkCommanderAttack steps(5);
-               background-position: 0px -2028px; }
-           100% { background-position: -3220px -2028px; }
-           
-        }
-        
-        
-        
-        @keyframes darkCommanderAttack {
-           0% {-webkit-animation: darkCommanderAttack steps(4);animation: darkCommanderAttack steps(4);
-               background-position: -4508px -676px; }
-           25% { background-position: -7084px -676px; }
-           
-           25.1% {-webkit-animation: darkCommanderAttack steps(11);animation: darkCommanderAttack steps(11);
-               background-position: 0px -1352px; }
-           75% { background-position: -7084px -1352px; }
-            
-            75.1% {-webkit-animation: darkCommanderAttack steps(5);animation: darkCommanderAttack steps(5);
-               background-position: 0px -2028px; }
-           100% { background-position: -3220px -2028px; }
-           
-        }
-        
-        
-        @-webkit-keyframes darkCommanderDamaged {
-           0% {-webkit-animation: darkCommanderDamaged steps(5);animation: darkCommanderDamaged steps(5);
-               background-position: -3864px -2028px; }
-           55% { background-position: -7084px -2028px; }
-           
-           55.1% {-webkit-animation: darkCommanderDamaged steps(5);animation: darkCommanderDamaged steps(5);
-               background-position: 0px -2704px; }
-           100% { background-position: -3220px -2704px; }
-           
-        }
-        
-        
-        @keyframes darkCommanderDamaged {
-           0% {-webkit-animation: darkCommanderDamaged steps(5);animation: darkCommanderDamaged steps(5);
-               background-position: -3864px -2028px; }
-           55% { background-position: -7084px -2028px; }
-           
-           55.1% {-webkit-animation: darkCommanderDamaged steps(5);animation: darkCommanderDamaged steps(5);
-               background-position: 0px -2704px; }
-           100% { background-position: -3220px -2704px; }
-           
-        }
-        
-        @-webkit-keyframes darkCommanderDeath {
-           0% {-webkit-animation: darkCommanderDeath steps(5);animation: darkCommanderDeath steps(5);
-               background-position: -3864px -2704px; }
-           25% { background-position: -7084px -2704px; }
-           
-           25.1% {-webkit-animation: darkCommanderDeath steps(11);animation: darkCommanderDeath steps(11);
-               background-position: 0px -3380px; }
-           75% { background-position: -7084px -3380px; }
-            
-            75.1% {-webkit-animation: darkCommanderDeath steps(10);animation: darkCommanderDeath steps(10);
-               background-position: 0px -4056px; }
-           100% { background-position: -6440px -4056px; }
-           
-        }
-        
-        @keyframes darkCommanderDeath {
-           0% {-webkit-animation: darkCommanderDeath steps(5);animation: darkCommanderDeath steps(5);
-               background-position: -3864px -2704px; }
-           25% { background-position: -7084px -2704px; }
-           
-           25.1% {-webkit-animation: darkCommanderDeath steps(11);animation: darkCommanderDeath steps(11);
-               background-position: 0px -3380px; }
-           75% { background-position: -7084px -3380px; }
-            
-            75.1% {-webkit-animation: darkCommanderDeath steps(10);animation: darkCommanderDeath steps(10);
-               background-position: 0px -4056px; }
-           100% { background-position: -6440px -4056px; }
-           
-        }
+@keyframes darkCommanderIdle {
+    0% {animation: darkCommanderIdle steps(11);
+        background-position: 0px -0px; }
+    55% { background-position: -3542px -0px; }
+    
+    55.1% {animation: darkCommanderIdle steps(8);
+        background-position: 0px -338px; }
+    100% { background-position: -2576px -338px; }
+    
+ }
+ 
+ 
+ 
+ @keyframes darkCommanderAttack {
+    0% {animation: darkCommanderAttack steps(4);
+        background-position: -2254px -338px; }
+    25% { background-position: -3542px -338px; }
+    
+    25.1% {animation: darkCommanderAttack steps(11);
+        background-position: 0px -676px; }
+    75% { background-position: -3542px -676px; }
+     
+     75.1% {animation: darkCommanderAttack steps(5);
+        background-position: 0px -1014px; }
+    100% { background-position: -1610px -1014px; }
+    
+ }
+ 
+ 
+ @keyframes darkCommanderDamaged {
+    0% {animation: darkCommanderDamaged steps(5);
+        background-position: -1932px -1014px; }
+    55% { background-position: -3542px -1014px; }
+    
+    55.1% {animation: darkCommanderDamaged steps(5);
+        background-position: 0px -1352px; }
+    100% { background-position: -1610px -1352px; }
+    
+ }
+ 
+ @keyframes darkCommanderDeath {
+    0% {animation: darkCommanderDeath steps(5);
+        background-position: -1932px -1352px; }
+    25% { background-position: -3542px -1352px; }
+    
+    25.1% {animation: darkCommanderDeath steps(11);
+        background-position: 0px -1690px; }
+    75% { background-position: -3542px -1690px; }
+     
+     75.1% {animation: darkCommanderDeath steps(10);
+        background-position: 0px -2028px; }
+    100% { background-position: -3220px -2028px; }
+    
+ }
 
 /*LIGHTSOLDIER*/
 
 
-@-webkit-keyframes lightSoldierIdle {
-		   0% {-webkit-animation: lightSoldierIdle steps(9);animation: lightSoldierIdle steps(9);
-               background-position: -0px -0px; }
-		   22% { background-position: -4167px -0px; }
-            
-            22.001% {-webkit-animation: lightSoldierIdle steps(9);animation: lightSoldierIdle steps(9);
-               background-position: -0px -413px; }
-		   45% { background-position: -4167px -413px; }
-		   
-		   45.001% {-webkit-animation: lightSoldierIdle steps(9);animation: lightSoldierIdle steps(9);
-               background-position: -0px -826px; }
-		   68% { background-position: -4167px -826px; }
-		   
-		   68.001% {-webkit-animation: lightSoldierIdle steps(9) ;animation: lightSoldierIdle steps(9) ;
-               background-position: -0px -1239px; }
-		   92% { background-position: -4167px -1239px; }
-            
-            92.001% {-webkit-animation: lightSoldierIdle steps(3) ;animation: lightSoldierIdle steps(3) ;
-               background-position: -0px -1652px; }
-		   100% { background-position: -1389px -1652px; }
-		   
-		}
-
-
 @keyframes lightSoldierIdle {
-		   0% {-webkit-animation: lightSoldierIdle steps(9);animation: lightSoldierIdle steps(9);
-               background-position: -0px -0px; }
-		   22% { background-position: -4167px -0px; }
-            
-            22.001% {-webkit-animation: lightSoldierIdle steps(9);animation: lightSoldierIdle steps(9);
-               background-position: -0px -413px; }
-		   45% { background-position: -4167px -413px; }
-		   
-		   45.001% {-webkit-animation: lightSoldierIdle steps(9);animation: lightSoldierIdle steps(9);
-               background-position: -0px -826px; }
-		   68% { background-position: -4167px -826px; }
-		   
-		   68.001% {-webkit-animation: lightSoldierIdle steps(9) ;animation: lightSoldierIdle steps(9) ;
-               background-position: -0px -1239px; }
-		   92% { background-position: -4167px -1239px; }
-            
-            92.001% {-webkit-animation: lightSoldierIdle steps(3) ;animation: lightSoldierIdle steps(3) ;
-               background-position: -0px -1652px; }
-		   100% { background-position: -1389px -1652px; }
-		   
-		}
-        
-        @-webkit-keyframes lightSoldierAttack {
-		   0% {-webkit-animation: lightSoldierAttack steps(5);animation: lightSoldierAttack steps(5);
-               background-position: -1852px -1652px; }
-		   40% { background-position: -4167px -1652px; }
-            
-            40.001% {-webkit-animation: lightSoldierAttack steps(9);animation: lightSoldierAttack steps(9);
-               background-position: -0px -2065px; }
-		   100% { background-position: -4167px -2065px; }
-		   
-		}
-        
-        @keyframes lightSoldierAttack {
-		   0% {-webkit-animation: lightSoldierAttack steps(5);animation: lightSoldierAttack steps(5);
-               background-position: -1852px -1652px; }
-		   40% { background-position: -4167px -1652px; }
-            
-            40.001% {-webkit-animation: lightSoldierAttack steps(9);animation: lightSoldierAttack steps(9);
-               background-position: -0px -2065px; }
-		   100% { background-position: -4167px -2065px; }
-		   
-		}
-        
-        
-        @-webkit-keyframes lightSoldierDamaged {
-		   0% {-webkit-animation: lightSoldierDamaged steps(9);animation: lightSoldierDamaged steps(9);
-               background-position: -0px -2478px; }
-		   90% { background-position: -4167px -2478px; }
-            
-            90.001% {-webkit-animation: lightSoldierDamaged steps(1);animation: lightSoldierDamaged steps(1);
-               background-position: -0px -2891px; }
-		   100% { background-position: -463px -2891px; }
-		   
-		}
-        
-        
-        @keyframes lightSoldierDamaged {
-		   0% {-webkit-animation: lightSoldierDamaged steps(9);animation: lightSoldierDamaged steps(9);
-               background-position: -0px -2478px; }
-		   90% { background-position: -4167px -2478px; }
-            
-            90.001% {-webkit-animation: lightSoldierDamaged steps(1);animation: lightSoldierDamaged steps(1);
-               background-position: -0px -2891px; }
-		   100% { background-position: -463px -2891px; }
-		   
-		}
-        
-        @-webkit-keyframes lightSoldierDeath {
-		   0% {-webkit-animation: lightSoldierDeath steps(8);animation: lightSoldierDeath steps(8);
-               background-position: -463px -2891px; }
-		   46% { background-position: -4167px -2891px; }
-            
-            46.001% {-webkit-animation: lightSoldierDeath steps(9);animation: lightSoldierDeath steps(9);
-               background-position: -0px -3304px; }
-		   100% { background-position: -4167px -3304px; }
-		   
-		}
-        
-        @keyframes lightSoldierDeath {
-		   0% {-webkit-animation: lightSoldierDeath steps(8);animation: lightSoldierDeath steps(8);
-               background-position: -463px -2891px; }
-		   46% { background-position: -4167px -2891px; }
-            
-            46.001% {-webkit-animation: lightSoldierDeath steps(9);animation: lightSoldierDeath steps(9);
-               background-position: -0px -3304px; }
-		   100% { background-position: -4167px -3304px; }
-		   
-		}
+    0% {animation: lightSoldierIdle steps(9);
+        background-position: -0px -5465px; }
+    22% { background-position: -2084px -5465px; }
+     
+     22.001% {animation: lightSoldierIdle steps(9);
+        background-position: -0px -5672px; }
+    45% { background-position: -2084px -5672px; }
+    
+    45.001% {animation: lightSoldierIdle steps(9);
+        background-position: -0px -5878px; }
+    68% { background-position: -2084px -5878px; }
+    
+    68.001% {animation: lightSoldierIdle steps(9) ;
+        background-position: -0px -6085px; }
+    92% { background-position: -2084px -6085px; }
+     
+     92.001% {animation: lightSoldierIdle steps(3) ;
+        background-position: -0px -6291px; }
+    100% { background-position: -695px -6291px; }
+    
+ }
+ 
+ @keyframes lightSoldierAttack {
+    0% {animation: lightSoldierAttack steps(5);
+        background-position: -926px -6291px; }
+    40% { background-position: -2084px -6291px; }
+     
+     40.001% {animation: lightSoldierAttack steps(9);
+        background-position: -0px -6498px; }
+    100% { background-position: -2084px -6498px; }
+    
+ }
+ 
+ 
+ @keyframes lightSoldierDamaged {
+    0% {animation: lightSoldierDamaged steps(9);
+        background-position: -0px -6704px; }
+    90% { background-position: -2084px -6704px; }
+     
+     90.001% {animation: lightSoldierDamaged steps(1);
+        background-position: -0px -6911px; }
+    100% { background-position: -232px -6911px; }
+    
+ }
+ 
+ @keyframes lightSoldierDeath {
+    0% {animation: lightSoldierDeath steps(8);
+        background-position: -232px -6911px; }
+    46% { background-position: -2084px -6911px; }
+     
+     46.001% {animation: lightSoldierDeath steps(9);
+        background-position: -0px -7117px; }
+    100% { background-position: -2084px -7117px; }
+    
+ }
 
 
 
 /*DARKDOG*/
 
 
- @-webkit-keyframes lightDogIdle {
-		   0% {-webkit-animation: lightDogIdle steps(8);animation: lightDogIdle steps(8);
-               background-position: -0px -0px; }
-		   28% { background-position: -4816px -0px; }
-            
-            28.001% {-webkit-animation: lightDogIdle steps(8);animation: lightDogIdle steps(8);
-               background-position: -0px -258px; }
-		   56% { background-position: -4816px -258px; }
-		   
-		   56.001% {-webkit-animation: lightDogIdle steps(8);animation: lightDogIdle steps(8);
-               background-position: -0px -516px; }
-		   86% { background-position: -4816px -516px; }
-            
-             86.001% {-webkit-animation: lightDogIdle steps(4);animation: lightDogIdle steps(4);
-               background-position: -0px -774px; }
-		   100% { background-position: -2408px -774px; }
-		   
-		}
-
-
- @keyframes lightDogIdle {
-		   0% {-webkit-animation: lightDogIdle steps(8);animation: lightDogIdle steps(8);
-               background-position: -0px -0px; }
-		   28% { background-position: -4816px -0px; }
-            
-            28.001% {-webkit-animation: lightDogIdle steps(8);animation: lightDogIdle steps(8);
-               background-position: -0px -258px; }
-		   56% { background-position: -4816px -258px; }
-		   
-		   56.001% {-webkit-animation: lightDogIdle steps(8);animation: lightDogIdle steps(8);
-               background-position: -0px -516px; }
-		   86% { background-position: -4816px -516px; }
-            
-             86.001% {-webkit-animation: lightDogIdle steps(4);animation: lightDogIdle steps(4);
-               background-position: -0px -774px; }
-		   100% { background-position: -2408px -774px; }
-		   
-		}
-        
-        
-         @-webkit-keyframes lightDogAttack {
-		   0% {-webkit-animation: lightDogAttack steps(4);animation: lightDogAttack steps(4);
-               background-position: -2408px -774px; }
-		   25% { background-position: -4816px -774px; }
-            
-            25.001% {-webkit-animation: lightDogAttack steps(8);animation: lightDogAttack steps(8);
-               background-position: -0px -1032px; }
-		   75% { background-position: -4816px -1032px; }
-		   
-		   75.001% {-webkit-animation: lightDogAttack steps(4);animation: lightDogAttack steps(4);
-               background-position: -0px -1290px; }
-		   100% { background-position: -2408px -1290px; }
-		   
-		}
-        
-        
-         @keyframes lightDogAttack {
-		   0% {-webkit-animation: lightDogAttack steps(4);animation: lightDogAttack steps(4);
-               background-position: -2408px -774px; }
-		   25% { background-position: -4816px -774px; }
-            
-            25.001% {-webkit-animation: lightDogAttack steps(8);animation: lightDogAttack steps(8);
-               background-position: -0px -1032px; }
-		   75% { background-position: -4816px -1032px; }
-		   
-		   75.001% {-webkit-animation: lightDogAttack steps(4);animation: lightDogAttack steps(4);
-               background-position: -0px -1290px; }
-		   100% { background-position: -2408px -1290px; }
-		   
-		}
-        
-        @-webkit-keyframes lightDogDamaged {
-		   0% {-webkit-animation: lightDogDamaged steps(3);animation: lightDogDamaged steps(3);
-               background-position: -3010px -1290px; }
-		   30% { background-position: -4816px -1290px; }
-            
-           30.001% {-webkit-animation: lightDogDamaged steps(7);animation: lightDogDamaged steps(7);
-               background-position: -0px -1548px; }
-		   100% { background-position: -4214px -1548px; }
-		   
-		}
-        
-        @keyframes lightDogDamaged {
-		   0% {-webkit-animation: lightDogDamaged steps(3);animation: lightDogDamaged steps(3);
-               background-position: -3010px -1290px; }
-		   30% { background-position: -4816px -1290px; }
-            
-           30.001% {-webkit-animation: lightDogDamaged steps(7);animation: lightDogDamaged steps(7);
-               background-position: -0px -1548px; }
-		   100% { background-position: -4214px -1548px; }
-		   
-		}
-        
-        
-        @-webkit-keyframes lightDogDeath {
-		   0% {-webkit-animation: lightDogDeath steps(1);animation: lightDogDeath steps(1);
-               background-position: -4212px -1548px; }
-		   8% { background-position: -4816px -1548px; }
-            
-            8.001% {-webkit-animation: lightDogDeath steps(8);animation: lightDogDeath steps(8);
-               background-position: -0px -1806px; }
-		   65% { background-position: -4816px -1806px; }
-		   
-		   65.001% {-webkit-animation: lightDogDeath steps(4);animation: lightDogDeath steps(4);
-               background-position: -0px -2064px; }
-		   100% { background-position: -4816px -2064px; }
-		   
-		}
-        
-        
-        @keyframes lightDogDeath {
-		   0% {-webkit-animation: lightDogDeath steps(1);animation: lightDogDeath steps(1);
-               background-position: -4212px -1548px; }
-		   8% { background-position: -4816px -1548px; }
-            
-            8.001% {-webkit-animation: lightDogDeath steps(8);animation: lightDogDeath steps(8);
-               background-position: -0px -1806px; }
-		   65% { background-position: -4816px -1806px; }
-		   
-		   65.001% {-webkit-animation: lightDogDeath steps(4);animation: lightDogDeath steps(4);
-               background-position: -0px -2064px; }
-		   100% { background-position: -4816px -2064px; }
-		   
-		}
+@keyframes lightDogIdle {
+    0% {animation: lightDogIdle steps(8);
+        background-position: -0px -4315px; }
+    28% { background-position: -2408px -4315px; }
+     
+     28.001% {animation: lightDogIdle steps(8);
+        background-position: -0px -4444px; }
+    56% { background-position: -2408px -4444px; }
+    
+    56.001% {animation: lightDogIdle steps(8);
+        background-position: -0px -4573px; }
+    86% { background-position: -2408px -4573px; }
+     
+      86.001% {animation: lightDogIdle steps(4);
+        background-position: -0px -4702px; }
+    100% { background-position: -1204px -4702px; }
+    
+ }
+ 
+ 
+  @keyframes lightDogAttack {
+    0% {animation: lightDogAttack steps(4);
+        background-position: -1204px -4702px; }
+    25% { background-position: -2408px -4702px; }
+     
+     25.001% {animation: lightDogAttack steps(8);
+        background-position: -0px -4831px; }
+    75% { background-position: -2408px -4831px; }
+    
+    75.001% {animation: lightDogAttack steps(4);
+        background-position: -0px -4960px; }
+    100% { background-position: -1204px -4960px; }
+    
+ }
+ 
+ @keyframes lightDogDamaged {
+    0% {animation: lightDogDamaged steps(3);
+        background-position: -1505px -4960px; }
+    30% { background-position: -2408px -4960px; }
+     
+    30.001% {animation: lightDogDamaged steps(7);
+        background-position: -0px -5089px; }
+    100% { background-position: -2107px -5089px; }
+    
+ }
+ 
+ 
+ @keyframes lightDogDeath {
+    0% {animation: lightDogDeath steps(1);
+        background-position: -2106x -5089px; }
+    8% { background-position: -2408px -5089px; }
+     
+     8.001% {animation: lightDogDeath steps(8);
+        background-position: -0px -5218px; }
+    65% { background-position: -2408px -5218px; }
+    
+    65.001% {animation: lightDogDeath steps(4);
+        background-position: -0px -5347px; }
+    100% { background-position: -2408px -5347px; }
+    
+ }
 
 
 /*LIGHTCOMMANDER*/
 
 
 @keyframes lightCommanderIdle {
-		   0% {animation: lightCommanderIdle steps(9);
-               background-position: -0px -0px; }
-		   25% { background-position: -6813px -0px; }
-            
-            25.001% {animation: lightCommanderIdle steps(9);
-               background-position: -0px -554px; }
-		   50% { background-position: -6813px -554px; }
-		   
-		   50.001% {animation: lightCommanderIdle steps(9);
-               background-position: -0px -1108px; }
-		   72% { background-position: -6813px -1108px; }
-		   
-		   72.001% {animation: lightCommanderIdle steps(9) ;
-               background-position: -0px -1661px; }
-		   96% { background-position: -6813px -1661px; }
-            
-             96.001% {animation: lightCommanderIdle steps(1) ;
-               background-position: -0px -2213px; }
-		   100% { background-position: -757px -2213px; }
-            
-		   
-		}
-        
-        
-        
-        @keyframes lightCommanderAttack {
-		   1% {animation: lightCommanderAttack steps(8);
-               background-position: -757px -2213px; }
-		   33% { background-position: -6813px -2213px; }
-            
-            33.001% {animation: lightCommanderAttack steps(9);
-               background-position: -0px -2770px; }
-		   68% { background-position: -6813px -2770px; }
-		   
-		   68.001% {animation: lightCommanderAttack steps(8);
-               background-position: -0px -3324px; }
-		  100% { background-position: -6056px -3324px; }
-		   
-		}
-        
-        
-        
-        @keyframes lightCommanderDamaged {
-		   1% {animation: lightCommanderDamaged steps(1);
-               background-position: -6056px -3324px; }
-		   10% { background-position: -6813px -3324px; }
-            
-           10.001% {animation: lightCommanderDamaged steps(9);
-               background-position: -0px -3878px; }
-		   65% { background-position: -6813px -3878px; }
-		   
-		   65.001% {animation: lightCommanderDamaged steps(4);
-               background-position: -0px -4432px; }
-		  100% { background-position: -3028px -4432px; }
-		   
-		}
-        
-        
-        
-        @keyframes lightCommanderDeath {
-            
-           1% {animation: lightCommanderDeath steps(5);
-               background-position: -3028px -4432px; }
-		   30% { background-position: -6813px -4432px; }
-		   
-		   30.001% {animation: lightCommanderDeath steps(9);
-               background-position: -0px -4986px; }
-		  100% { background-position: -6813px -4986px; }
-		   
-		}
+    0% {animation: lightCommanderIdle steps(8);
+        background-position: -0px -0px; }
+    20% { background-position: -2480px -0px; }
+     
+     20.001% {animation: lightCommanderIdle steps(8);
+        background-position: -0px -227px; }
+    40% { background-position: -2480px -227px; }
+    
+    40.001% {animation: lightCommanderIdle steps(8);
+        background-position: -0px -453px; }
+    60% { background-position: -2480px -453px; }
+    
+    60.001% {animation: lightCommanderIdle steps(8) ;
+        background-position: -0px -680px; }
+    80% { background-position: -2480px -680px; }
+     
+     80.001% {animation: lightCommanderIdle steps(6) ;
+        background-position: -0px -906px; }
+    100% { background-position: -1860px -906px; }
+    
+ }
+ 
+ 
+ 
+ @keyframes lightCommanderAttack {
+    1% {animation: lightCommanderAttack steps(3);
+        background-position: -1550px -908px; }
+    15% { background-position: -2480px -908px; }
+     
+     15.001% {animation: lightCommanderAttack steps(8);
+        background-position: -0px -1135px; }
+    45% { background-position: -2480px -1135px; }
+    
+    45.001% {animation: lightCommanderAttack steps(8);
+        background-position: -0px -1362px; }
+   80% { background-position: -2480px -1362px; }
+    
+    80.001% {animation: lightCommanderAttack steps(5) ;
+        background-position: -0px -1589px; }
+    100% { background-position: -1550px -1589px; }
+ }
+ 
+ 
+ 
+ @keyframes lightCommanderDamaged {
+    1% {animation: lightCommanderDamaged steps(2);
+        background-position: -1860px -1589px; }
+    20% { background-position: -2480px -1589px; }
+     
+    20.001% {animation: lightCommanderDamaged steps(8);
+        background-position: -0px -1816px; }
+    65% { background-position: -2480px -1816px; }
+    
+    65.001% {animation: lightCommanderDamaged steps(4);
+        background-position: -0px -2043px; }
+   100% { background-position: -1240px -2043px; }
+    
+ }
+ 
+ 
+ 
+ @keyframes lightCommanderDeath {
+     
+    1% {animation: lightCommanderDeath steps(4);
+        background-position: -1240px -2043px; }
+    30% { background-position: -2480px -2043px; }
+    
+    30.001% {animation: lightCommanderDeath steps(8);
+        background-position: -0px -2270px; }
+   100% { background-position: -2480px -2270px; }
+    
+ }
         
 /*LIGHTARCHER*/
 
 
- @-webkit-keyframes lightArcherIdle {
-		   0% {-webkit-animation: lightArcherIdle steps(9);animation: lightArcherIdle steps(9);
-               background-position: -0px -0px; }
-		   26% { background-position: -4428px -0px; }
-            
-            26.001% {-webkit-animation: lightArcherIdle steps(9);animation: lightArcherIdle steps(9);
-               background-position: -0px -403px; }
-		   52% { background-position: -4428px -403px; }
-		   
-		   52.001% {-webkit-animation: lightArcherIdle steps(9);animation: lightArcherIdle steps(9);
-               background-position: -0px -806px; }
-		   79% { background-position: -4428px -806px; }
-		   
-		   79.001% {-webkit-animation: lightArcherIdle steps(6) ;animation: lightArcherIdle steps(6) ;
-               background-position: -0px -1209px; }
-		   100% { background-position: -2952px -1209px; }
-		   
-		}
-
-
- @keyframes lightArcherIdle {
-		   0% {-webkit-animation: lightArcherIdle steps(9);animation: lightArcherIdle steps(9);
-               background-position: -0px -0px; }
-		   26% { background-position: -4428px -0px; }
-            
-            26.001% {-webkit-animation: lightArcherIdle steps(9);animation: lightArcherIdle steps(9);
-               background-position: -0px -403px; }
-		   52% { background-position: -4428px -403px; }
-		   
-		   52.001% {-webkit-animation: lightArcherIdle steps(9);animation: lightArcherIdle steps(9);
-               background-position: -0px -806px; }
-		   79% { background-position: -4428px -806px; }
-		   
-		   79.001% {-webkit-animation: lightArcherIdle steps(6) ;animation: lightArcherIdle steps(6) ;
-               background-position: -0px -1209px; }
-		   100% { background-position: -2952px -1209px; }
-		   
-		}
-        
-        
-        @-webkit-keyframes lightArcherAttack {
-		   0% {-webkit-animation: lightArcherAttack steps(3);animation: lightArcherAttack steps(3);
-               background-position: -2952px -1209px; }
-		   15% { background-position: -4428px -1209px; }
-            
-            15.001% {-webkit-animation: lightArcherAttack steps(9);animation: lightArcherAttack steps(9);
-               background-position: -0px -1612px; }
-		   50% { background-position: -4428px -1612px; }
-		   
-		   50.001% {-webkit-animation: lightArcherAttack steps(9);animation: lightArcherAttack steps(9);
-               background-position: -0px -2015px; }
-		   85% { background-position: -4428px -2015px; }
-		   
-		   85.001% {-webkit-animation: lightArcherAttack steps(3) ;animation: lightArcherAttack steps(3) ;
-               background-position: -0px -2418px; }
-		   100% { background-position: -1476px -2418px; }
-		   
-		}
-        
-        
-        @keyframes lightArcherAttack {
-		   0% {-webkit-animation: lightArcherAttack steps(3);animation: lightArcherAttack steps(3);
-               background-position: -2952px -1209px; }
-		   15% { background-position: -4428px -1209px; }
-            
-            15.001% {-webkit-animation: lightArcherAttack steps(9);animation: lightArcherAttack steps(9);
-               background-position: -0px -1612px; }
-		   50% { background-position: -4428px -1612px; }
-		   
-		   50.001% {-webkit-animation: lightArcherAttack steps(9);animation: lightArcherAttack steps(9);
-               background-position: -0px -2015px; }
-		   85% { background-position: -4428px -2015px; }
-		   
-		   85.001% {-webkit-animation: lightArcherAttack steps(3) ;animation: lightArcherAttack steps(3) ;
-               background-position: -0px -2418px; }
-		   100% { background-position: -1476px -2418px; }
-		   
-		}
-        
-        @-webkit-keyframes lightArcherDamaged {
-		   0% {-webkit-animation: lightArcherDamaged steps(6);animation: lightArcherDamaged steps(6);
-               background-position: -1476px -2418px; }
-		   80% { background-position: -4428px -2418px; }
-            
-            80.001% {-webkit-animation: lightArcherDamaged steps(1);animation: lightArcherDamaged steps(1);
-               background-position: -0px -2821px; }
-		   100% { background-position: -492px -2821px; }
-		   
-		}
-        
-        @keyframes lightArcherDamaged {
-		   0% {-webkit-animation: lightArcherDamaged steps(6);animation: lightArcherDamaged steps(6);
-               background-position: -1476px -2418px; }
-		   80% { background-position: -4428px -2418px; }
-            
-            80.001% {-webkit-animation: lightArcherDamaged steps(1);animation: lightArcherDamaged steps(1);
-               background-position: -0px -2821px; }
-		   100% { background-position: -492px -2821px; }
-		   
-		}
-        
-        
-        @-webkit-keyframes lightArcherDeath {
-		   0% {-webkit-animation: lightArcherDeath steps(7);animation: lightArcherDeath steps(7);
-               background-position: -984px -2821px; }
-		   50% { background-position: -4428px -2821px; }
-            
-            50.001% {-webkit-animation: lightArcherDeath steps(8);animation: lightArcherDeath steps(8);
-               background-position: -0px -3224px; }
-		   100% { background-position: -3936px -3224px; }
-		   
-		}
-        
-        
-        @keyframes lightArcherDeath {
-		   0% {-webkit-animation: lightArcherDeath steps(7);animation: lightArcherDeath steps(7);
-               background-position: -984px -2821px; }
-		   50% { background-position: -4428px -2821px; }
-            
-            50.001% {-webkit-animation: lightArcherDeath steps(8);animation: lightArcherDeath steps(8);
-               background-position: -0px -3224px; }
-		   100% { background-position: -3936px -3224px; }
-		   
-		}
-
+@keyframes lightArcherIdle {
+    0% {animation: lightArcherIdle steps(9);
+        background-position: -0px -2497px; }
+    26% { background-position: -2214px -2497px; }
+     
+     26.001% {animation: lightArcherIdle steps(9);
+        background-position: -0px -2699px; }
+    52% { background-position: -2214px -2699px; }
+    
+    52.001% {animation: lightArcherIdle steps(9);
+        background-position: -0px -2901px; }
+    79% { background-position: -2214px -2901px; }
+    
+    79.001% {animation: lightArcherIdle steps(6) ;
+        background-position: -0px -3103px; }
+    100% { background-position: -1476px -3103px; }
+    
+ }
+ 
+ 
+ @keyframes lightArcherAttack {
+    0% {animation: lightArcherAttack steps(3);
+        background-position: -1476px -3102px; }
+    15% { background-position: -2214px -3102px; }
+     
+     15.001% {animation: lightArcherAttack steps(9);
+        background-position: -0px -3303px; }
+    50% { background-position: -2214px -3303px; }
+    
+    50.001% {animation: lightArcherAttack steps(9);
+        background-position: -0px -3505px; }
+    85% { background-position: -2214px -3505px; }
+    
+    85.001% {animation: lightArcherAttack steps(3) ;
+        background-position: -0px -3706px; }
+    100% { background-position: -738px -3706px; }
+    
+ }
+ 
+ @keyframes lightArcherDamaged {
+    0% {animation: lightArcherDamaged steps(6);
+        background-position: -738px -3706px; }
+    80% { background-position: -2214px -3706px; }
+     
+     80.001% {animation: lightArcherDamaged steps(1);
+        background-position: -0px -3908px; }
+    100% { background-position: -246px -3908px; }
+    
+ }
+ 
+ 
+ @keyframes lightArcherDeath {
+    0% {animation: lightArcherDeath steps(7);
+        background-position: -492px -3908px; }
+    50% { background-position: -2214px -3908px; }
+     
+     50.001% {animation: lightArcherDeath steps(8);
+        background-position: -0px -4109px; }
+    100% { background-position: -1968px -4109px; }
+    
+ }
 
 
 /*Media Queries*/

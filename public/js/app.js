@@ -16,7 +16,8 @@ var limitAttack = 0;
 // ROOMS STUFF
 var curroom = "";
 
-
+//-- CLIENT SIDE STATUS --//
+var b_status = document.getElementById("b_status");
 
 
 //    Main menu Navigation
@@ -709,7 +710,8 @@ f_socket.on('gameStatus', function (tgameObj) {
     
     ntdarkWizard.innerHTML = "<div style='left: 65px; top: 5px; position: relative; display: block; font-size: 1.2em; color: white'>" + gameObj.drkSide.darkWizard.name + "</div>" + "<div style='left: 180px; top: -5px; position: relative; font-size: 0.7em; color: white'>" + gameObj.drkSide.darkWizard.health + "</div>" + "<div style='left: 180px; top: -5px; position: relative; font-size: 0.7em; color: white'>" + gameObj.drkSide.darkWizard.atk + "</div>";
 
-    
+    //--INSERT ME THIS UPDATES THE GAME WHEN THE GAME STATUS CHANGES--//
+    b_status.innerHTML = gameObj.b_status;
 }); // <--- GAMESTATUS ENDS HERE
 
 
@@ -838,21 +840,31 @@ f_socket.on('gameStatus', function (tgameObj) {
 
 // Need to tell the SERVER when a minion's health is 0, and have the server to emit back to the curroom to remove the minion from the curroom. 
 
-endTurnBtn.addEventListener("click", function () {
+endTurnBtn.addEventListener("click", function(){
     var pn = f_socket.id;
+    
+    var current_turn = "";
+    
+    //-- INSERT ME NEW. Doesn't work l o l --//
+     if (gameObj.turn = 1){
+         current_turn = "It's Player 1's Turn.";
+         }
+         
+    if (gameObj.turn = 2){
+        current_turn = "It's Player 2's Turn.";
+        }
 
-
+    
     f_socket.emit('updateTurn', {
         turn: gameObj.turn,
-        roomname: curroom
+        roomname: curroom,
+        b_status: current_turn
     });
-
+    
     limitCard = 0;
     limitAttack = 0;
-
-    console.log("Attack: " + limitCard);
-    console.log("Card: "+ limitAttack);
-    console.log("Current turn is ", gameObj.turn);
+    
+    console.log("Current turn is ",gameObj.turn);
     console.log("Update turn!");
 })
 

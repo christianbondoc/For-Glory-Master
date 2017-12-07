@@ -87,6 +87,7 @@ var gameObj = {
     p2: null,
     p1state: 1,
     p2state: 0,
+    b_status: "Waiting for Player 2.",
     turn: 1
 
 }; // GAMEOBJ ENDS
@@ -180,6 +181,10 @@ io.on('connection', function(socket){
         // console.log("p1 is now " + rooms[data.roomname].gameObj.p1);
         // why does this make the code crash? says gameObj of rooms[data.roomname].gameObj.p1 is undefined
         io.in(room).emit('gameStatus', rooms[data.roomname].gameObj);
+
+            //-- INSERT ME ---//
+            io.in(room).emit('gameStatus', rooms[data.roomname].gameObj);
+            
         
     });
 
@@ -191,7 +196,9 @@ io.on('connection', function(socket){
         room = data.roomname;
         rooms[data.roomname].gameObj.p2 = data.pn;
 
-
+         //-- INSERT ME NEW--//
+         rooms[data.roomname].gameObj.b_status = data.b_status;
+         
         console.log("p2 is now " + rooms[data.roomname].gameObj.p2);
         console.log(rooms[data.roomname].gameObj);
 
@@ -292,7 +299,10 @@ io.on('connection', function(socket){
     socket.on('updateDarkMin', function(data){
         
         var room = data.roomname;
-        
+
+        //-- INSERT ME NEW --//
+        rooms[data.roomname].gameObj.b_status = data.b_status;
+                
         console.log("The data sent over is ",data);
 
         // LINE 134 CHANGES THE ATK VALUE OF DARK BOIS
@@ -317,7 +327,8 @@ io.on('connection', function(socket){
     socket.on('updateLightMin', function (data) {
 
         var room = data.roomname;
-
+        //-- INSERT ME NEW --//
+                rooms[data.roomname].gameObj.b_status = data.b_status;
         var result = rooms[data.roomname].gameObj.lghtSide[data.backendUpdateObj.monster].atk + cardObj.lghtSide[data.backendUpdateObj.card].atk
         // LIGHT SIDE ATTACK 
 
