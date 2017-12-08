@@ -1,4 +1,4 @@
-console.log("You are in file ~/desktop/FG-FR-BK");
+console.log("You are in file ~/desktop/FGFRBK");
 //Websocket variable
 var f_socket = io.connect('localhost:4000');
 var gameObj = null;
@@ -102,6 +102,7 @@ var b_status = document.getElementById("b_status");
                 console.log(data[i].room);
                 
                 roomDiv.appendChild(ndiv);
+
                 // gives the room a div id which matches the name of the room
 
                 ndiv.id = data[i].room;
@@ -128,7 +129,8 @@ var b_status = document.getElementById("b_status");
 
                     f_socket.emit('updateP2', {
                         pn: pn,
-                        roomname: curroom
+                        roomname: curroom,
+                        b_status: "It's Player 1's Turn! :) <3"
                     });
                 });
             }
@@ -167,7 +169,12 @@ var b_status = document.getElementById("b_status");
 
       roomDiv.addEventListener("click", function(){
 
-          roomDiv.style.textShadow = "5px 5px 1px #ff0000,10px 10px 1px #0000ff";
+          roomDiv.style.textShadow = "1px 1px 1px #292929,5px 5px 2px #000000";
+
+          for (var i=0; i < roomDiv.length; i++ ) {
+              console.log(i)
+              [i].style.textShadow = "5px 5px 1px #ff0000,10px 10px 1px #0000ff";
+          }
 
           // Send what room has been joined
 
@@ -379,7 +386,8 @@ $(".bgScroll").mousemove(function(e){
 
                 f_socket.emit('updateDarkMin', {
                     backendUpdateObj: updateObj,
-                    roomname: curroom
+                    roomname: curroom,
+                    b_status: updateObj.monster + " has been boosted!"
                 });
 
                 //-- INSERT HERE --//
@@ -406,11 +414,13 @@ $(".bgScroll").mousemove(function(e){
                 // Update server with drop function
                 f_socket.emit('updateLightMin', {
                     backendUpdateObj: updateObj,
-                    roomname: curroom
+                    roomname: curroom,
+                    b_status: updateObj.monster + " has been boosted!"
                 });
 
                 /-- Updates the Number card drops --/ /
                     //-- INSERT ME --//
+
 
                     limitCard++;
                 console.log(limitCard);
@@ -464,7 +474,7 @@ f_socket.on('gameStatus', function (tgameObj) {
                     console.log("The game object number is ", gameObj.p1);
 
                     //--INSERT ME--//                    
-            if ((pn == gameObj.p1 && gameObj.turn == 1) || (pn == gameObj.p2 && gameObj.turn == 2)){
+            // if ((pn == gameObj.p1 && gameObj.turn == 1) || (pn == gameObj.p2 && gameObj.turn == 2)){
 
                 var curMon = null;
                 console.log(atkState);
@@ -493,7 +503,13 @@ f_socket.on('gameStatus', function (tgameObj) {
                     
                     var atkID = [this.id]
                     console.log([this.id]);
+
+                    //-- DETECTS MONSTER CLICKED ON --//
+                    b_status.innerHTML = "You have selected "+ [this.id] + ".";
+
+
                 }
+
 
 
                     // Click state 2 is when minion is confirmed not same minion type vvvvvvv SECOND CLICK HERE vvvvvvv
@@ -540,17 +556,19 @@ f_socket.on('gameStatus', function (tgameObj) {
 
                             console.log("Light count: ", removeMinCountLight);
                             console.log("Dark count: ", removeMinCountDark);
+                            
                             setTimeout(function () {
-                                
-    // FIX THIS LATER                            // if (removeMinCountDark <= 3 || removeMinCountLight <= 3) {
+
                                 document.getElementById(monHurt).style.animation = idleSetTwo;
-                                // }
+
                             }, 500);
 
 
                             // Why only wizard animation if > i <
 
-
+                            //-- INSERTED DEC 7 --//
+                            var attacker = atkState.minOne.name;
+                            var victim = atkState.minTwo.name;
 
                             console.log("Monster being selected for first click is: ", atkState.monIdOne);
 
@@ -559,6 +577,7 @@ f_socket.on('gameStatus', function (tgameObj) {
                             f_socket.emit('updateStatus', {
                                 backendUpdateObj: atkState,
                                 roomname: curroom,
+                                b_status: attacker + " is attacking "+ victim + "."
                             });
 
                             //-- INSERT ME ---//
@@ -573,7 +592,7 @@ f_socket.on('gameStatus', function (tgameObj) {
                         alert("You can't attack your own team!");
                     }
                     //---INSERT ME---//
-                }
+                //}
             })
         }
     }
@@ -626,8 +645,13 @@ f_socket.on('gameStatus', function (tgameObj) {
 
                     // DARK SIDE WIN CONDITION
                     setTimeout(function () {
-                        alert("The Wellman and his cutthroat crew has won!!");
-                        
+
+                        var darkWinner = document.createElement("div");
+
+                        darkWinner.setAttribute("class", "darkWinner")
+
+                        container2.appendChild(darkWinner);
+
                     }, 1000);
 
 
@@ -639,10 +663,6 @@ f_socket.on('gameStatus', function (tgameObj) {
     for (var i in gameObj.lghtSide) {
         if (gameObj.lghtSide[i].health <= 0){
             $("#nt"+i).remove();
-
-            
-
-
         }
     }
 
@@ -657,7 +677,6 @@ f_socket.on('gameStatus', function (tgameObj) {
             f_socket.emit('lightsideUpdateDeath', {
                 monster: gameObj.drkSide[i],
                 roomname: curroom
-
             }) 
 
             moni = [i];
@@ -666,20 +685,28 @@ f_socket.on('gameStatus', function (tgameObj) {
 
             setTimeout(function () {
                 $("#" + moni).remove();
+
                 console.log("monster is removed " + moni);
                 moni = null;
                 moni2 = null;
-            }, 1000);
+            }, 1500);
             
             console.log(removeMinCountDark);
             // LIGHT SIDE WIN CONDITION 
             if (removeMinCountDark == 4) {
                 removeMinCountDark = 0;
 
+                
                 setTimeout(function () {
-                    alert("The Valkyire has risen against the competition!!");
+
+                    var lightWinner = document.createElement("div");
+
+                    lightWinner.setAttribute("class", "lightWinner")
+
+                    container2.appendChild(lightWinner);
 
                 }, 1000);
+
 
             }
         }
@@ -920,10 +947,10 @@ var animations = {
         death: "darkWizardDeath 1.5s steps(10)"
     },
     "darkGrunt": {
-        idle: "darkGruntIdle 1.5s steps(10)",
-        attack: "darkGruntAttack 1s steps(11) forwards",
-        damaged: "darkGruntDamaged 0.5s steps(11) forwards",
-        death: "darkGruntDeath 1.1s steps(11) forwards"
+        idle: "darkGruntIdle 1.3s steps(9) infinite",
+        attack: "darkGruntAttack 1s steps(9) forwards",
+        damaged: "darkGruntDamaged 0.5s steps(9) forwards",
+        death: "darkGruntDeath 1.1s steps(9) forwards"
     },
 
     "darkDog": {

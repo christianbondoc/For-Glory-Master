@@ -272,6 +272,9 @@ io.on('connection', function(socket){
             rooms[data.roomname].gameObj.lghtSide[data.backendUpdateObj.monIdTwo].health = result;
         } 
 
+        //-- UPDATES THE GAME STATUS --//
+        rooms[data.roomname].gameObj.b_status = data.b_status;
+
 
         console.log("Line 268", result);
  
